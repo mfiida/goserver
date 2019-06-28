@@ -8,8 +8,8 @@ phases:
     - IMAGE=$REPO0:latest
   build:
     commands:
-    - docker build -t $IMAGE
-    - docker push $IMAGE
+    - docker build -t 667009429896.dkr.ecr.ap-northeast-1.amazonaws.com/iida_hakone:latest
+    - docker push 667009429896.dkr.ecr.ap-northeast-1.amazonaws.com/iida_hakone:latest
   post_build:
     commands:
     - printf '[{"name":"iida-hakone", "imageUri":"%s"}]' $IMAGE > imagedefinitions.json
