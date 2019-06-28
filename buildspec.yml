@@ -6,7 +6,7 @@ phases:
     - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
     - REPO=$(aws ecr describe-repositories --repository-name iida-hakone --output text --query "repositories[0].repositoryUri")
     - IMAGE=$REPO0:latest
-  biuld:
+  build:
     commands:
     - docker build -t $IMAGE
     - docker push $IMAGE
