@@ -4,7 +4,7 @@ phases:
   pre_build:
     commands:
     - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
-    - REPO=$(aws ecr describe-repositories --repository-name goserver -hakone --output text --query "repositories[0].repositoryUri")
+    - REPO=$(aws ecr describe-repositories --repository-name iida_hakone --output text --query "repositories[0].repositoryUri")
     - IMAGE=$REPO0:latest
   build:
     commands:
